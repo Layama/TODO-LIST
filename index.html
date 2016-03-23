@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app="App">
+<head>
+
+	<title>Tareas</title>
+	<meta charset="UTF-8"/>
+
+	<script src="lib/jquery/dist/jquery.min.js"></script>
+	<link rel="stylesheet" href="lib/Materialize/dist/css/materialize.min.css">
+	<script src="lib/Materialize/dist/js/materialize.min.js"></script>
+	<script src="lib/velocity/velocity.ui.min.js"></script>
+	<script src="lib/velocity/velocity.min.js"></script>
+
+	<script src="Scripts/script.js"></script>
+	<link rel="stylesheet" href="CSS/estilos.css">
+
+</head>
+<body>
+<header>
+<div class="container-fluid">
+	<div class="row">
+		 <nav>
+		    <div class="nav-wrapper">
+				    <img src="Pics/main.png" height="60" width="60"  style="background-size:cover; border-radius:50%;" alt="Contact Person">
+		     <span> .</span> <a href="#" class="brand-logo">Tareas</a>
+		      <ul id="nav-mobile" class="right hide-on-med-and-down">
+		        <li><a href="#">Tareas X dias</a></li>
+		        <li><a href="#">Tareas X Meses</a></li>
+		        <li><a href="#">Tareas X Años</a></li>
+		      </ul>
+		    </div>
+		  </nav>
+	  </div> </div>
+ </header>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 ">
+				  <div class="chip">
+				    <img src="Pics/pic.jpg" height="100" width="100" alt="Contact Person">
+				   	Lista de Tareas
+				  </div>
+        
+				<div class="contenedor">
+					<div class="semana">cargando...</div>
+				</div>
+				<br/>
+				<div class="row">
+					<div class="input-field col s12 m3">
+						<input id="dato" type="text" require="true" placeholder="Ingrese Tarea" />	
+					</div>
+					<div class="input-field col s12 m3">
+						<input id="prioridad" type="number" require="true" placeholder="Ingrese Prioridad" />
+					</div>
+					<div class="input-field col s12 m3">
+						<input id="fecha" type="datetime-local" require="true" placeholder="Ingrese Fecha" />
+					</div>
+				</div>
+					<span id="msj"></span>
+					<br/>	
+				<button class="waves-effect waves-light btn" id="agregar" >Agregar dato</button>
+			
+			  <div class="p">
+			    
+			  </div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
