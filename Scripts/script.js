@@ -23,9 +23,16 @@ $(document).ready(function(){
 	$("#agregar").click(agregartarea);
 	crearContenedor();
 	imprimirtarea();
-
+	animate();
 });
 
+
+function animate(){
+	$(".card").velocity("transition.swoopIn", {
+		stagger: 50,
+		drag: true
+	});
+}
 function crearContenedor() {
 	$(".semana").velocity("scroll", { 
 	  container: $(".contenedor"),
@@ -39,6 +46,7 @@ function agregartarea(){
 	tarea.fecha = $("#fecha").val();
 	if(tarea.titulo != '' && tarea.prioridad != '' && tarea.fecha != ''){
 		todo.push(tarea);
+		tarea = {};
 		imprimirtarea();
 		imprimirMensaje(true);
 	} else {
@@ -49,7 +57,7 @@ function agregartarea(){
 function imprimirtarea(){
 	$(".semana").html("");
 	todo.forEach(function(tarea){
-		$(".semana").append("<div class='row' style='margin-bottom:-10px;'> <div class='col s12 m4'>  <div class='card' style='margin-bottom:0px;'> <div class='card-content'> <p>" + tarea.titulo + " " + tarea.prioridad+ "<br/>" + ""  + "</p></div></div></div></div>");
+		$(".semana").append("<div class='row crd' style='margin-bottom:-10px;'> <div class='col s12 m6'>  <div class='card' style='margin-bottom:0px;'> <div class='card-content'> <p>" + tarea.titulo + " " + tarea.prioridad+ "<br/>" + ""  + "</p></div></div></div></div>");
 	});
 }
 
@@ -113,8 +121,6 @@ function imprimirMensaje(esCampoValido){
 			"color": "red"
 		});
 		
-		
-
 		setTimeout(function(){
 			$("#msj").html("");
 			$("#dato").css({

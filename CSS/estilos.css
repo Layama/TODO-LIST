@@ -40,6 +40,10 @@ p {
 	font-size: 14pt;
 	letter-spacing: 2px;
 }
+.row .crd {
+  margin-left: 20%;
+  margin-right: 10%;
+}
 .nav-wrapper{
 	background-color: skyblue;
 }
